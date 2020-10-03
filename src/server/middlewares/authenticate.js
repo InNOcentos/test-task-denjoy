@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = (store) => (
-    async (req, res, next) => {      
+    (req, res, next) => {      
         const { username, password } = req.body;
 
         if ( !store.checkUser(username, password)) {

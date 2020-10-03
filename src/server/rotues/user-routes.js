@@ -10,7 +10,7 @@ const userRouter = new Router();
 
 userRouter.get('/register', alreadyRegister(userStore), (req,res) => {
     try {
-        res.sendFile(path.resolve(__dirname,'../../public/register.html'));
+        return res.sendFile(path.resolve(__dirname,'../../public/register.html'));
     }catch (err) {
         return console.log(err.message);
     }
@@ -28,7 +28,7 @@ userRouter.post('/register', alreadyRegister(userStore), (req,res) => {
 
 userRouter.get('/login', (req,res) => {
     try {
-        res.sendFile(path.resolve(__dirname,'../../public/login.html'));
+        return res.sendFile(path.resolve(__dirname,'../../public/login.html'));
     }catch(err){
         return console.log(err.message);
     }
