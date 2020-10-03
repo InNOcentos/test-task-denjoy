@@ -1,0 +1,29 @@
+{
+  "name": "test-task-denjoy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/app",
+  "scripts": {
+    "start": "node ./src/server/app",
+    "dev": "nodemon ./src/server/app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InNOcentos/test-task-denjoy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/InNOcentos/test-task-denjoy/issues"
+  },
+  "homepage": "https://github.com/InNOcentos/test-task-denjoy#readme",
+  "dependencies": {
+    "express": "4.17.1",
+    "multer": "1.4.2",
+    "nanoid": "3.1.12"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.4"
+  }
+}

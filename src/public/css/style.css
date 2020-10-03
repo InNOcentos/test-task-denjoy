@@ -1,0 +1,36 @@
+body {
+    width: 300px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+label {
+    font-weight: bold;
+    padding: 8px 0;
+}
+
+input {
+    padding: 10px;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    margin: 15px 0 25px 0;
+}
+
+a {
+    width: 100%;
+    margin-top: 25px;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    outline: 1px solid black;
+    text-decoration: none;
+}
