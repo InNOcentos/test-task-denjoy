@@ -33,7 +33,7 @@ mainRouter.post("/", privateRoute, uploadFile, (req, res) => {
 
 mainRouter.get("/getFile", privateRoute, (req, res) => {
   try {
-    res.cookie(`sid`, `${res.locals.user.id}`, {
+    return res.cookie(`sid`, `${res.locals.user.id}`, {
         expires: new Date(Date.now() + 3600 * 48 * 1000),
         httpOnly: true,
       }).sendFile(path.resolve(__dirname, "../../public/getFile.html"));
@@ -57,7 +57,7 @@ mainRouter.post("/getFile", privateRoute, (req, res) => {
 
 mainRouter.get('/logout', privateRoute, (req,res) => {
     try {
-        res.clearCookie('sid').redirect('back');
+        return res.clearCookie('sid').redirect('back');
     }catch(err){
         return console.log(err.message);
     }
