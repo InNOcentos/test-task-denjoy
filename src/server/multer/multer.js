@@ -21,7 +21,7 @@ const fileFilter = (req,file,next)=> {
 
 const upload = multer({ storage, fileFilter }).single(`picture`);
 
-exports.uploadFile = async (req,res,next) => {
+exports.uploadFile = (req,res,next) => {
     
     upload(req,res,function (err) {
         try {

@@ -20,7 +20,7 @@ mainRouter.get("/", privateRoute, (req, res) => {
   }
 });
 
-mainRouter.post("/", privateRoute, uploadFile, async (req, res) => {
+mainRouter.post("/", privateRoute, uploadFile, (req, res) => {
   try {
     return res.cookie(`sid`, `${res.locals.user.id}`, {
         expires: new Date(Date.now() + 3600 * 48 * 1000),

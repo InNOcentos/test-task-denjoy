@@ -9,6 +9,5 @@ module.exports = (store) => (
         }
 
         next();
-        return;
     }
 );
